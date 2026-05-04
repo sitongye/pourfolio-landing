@@ -1,6 +1,6 @@
-# Pourfolio Landing Page
+# Tamped Landing Page
 
-Pop-art style landing page for **Pourfolio** — your personal coffee journal app.
+Pop-art style landing page for **Tamped** — your personal coffee journal app.
 
 ## Preview
 

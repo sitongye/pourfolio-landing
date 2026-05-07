@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Tamped</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Condensed:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                "cream": "#F0EADB",
+                "cream-lite": "#FAF6EE",
+                "navy": "#1B2A6E",
+                "navy-deep": "#111D4E",
+                "red": "#D63230",
+            },
+            fontFamily: {
+                "headline": ["Archivo Black", "sans-serif"],
+                "body": ["Roboto Condensed", "sans-serif"],
+                "mono": ["Space Mono", "monospace"],
+            },
+        },
+    },
+}
+</script>
+</head>
+<body class="bg-cream-lite text-navy-deep font-body min-h-screen">
+
+<nav class="border-b-4 border-navy-deep bg-cream px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="font-headline text-2xl tracking-tight text-navy">
+        TAMPED
+    </a>
+    <span class="font-mono text-xs tracking-widest uppercase opacity-60">Privacy Policy</span>
+</nav>
+
+<main class="max-w-3xl mx-auto px-6 py-16">
+
+<h1 class="font-headline text-4xl md:text-5xl mb-2">Privacy Policy</h1>
+<p class="text-sm font-mono opacity-60 mb-12">Effective date: 3 May 2026</p>
+
+<div class="space-y-10 text-lg leading-relaxed">
+
+<p>Tamped ("we", "us", or "our") is a personal coffee journal app developed by Sitong Ye. This policy explains what data we collect, how we use it, and your rights regarding that data.</p>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">1. Data We Collect</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Account information:</strong> Email address and display name when you sign up (or name/email provided by Google or Apple Sign-In).</li>
+    <li><strong>Coffee data:</strong> Beans, brew logs, recipes, equipment, café visits, cupping scores, and related notes you enter.</li>
+    <li><strong>Photos:</strong> Images you capture or select (bean bags, latte art, café visits). Photos are stored in Firebase Cloud Storage linked to your account.</li>
+    <li><strong>Location:</strong> When you log a café visit or browse the Atlas map, we use your approximate location to show nearby places. Location is used only in real-time and is not continuously tracked.</li>
+    <li><strong>Subscription status:</strong> Purchase and entitlement data managed by RevenueCat to determine your plan (free or premium).</li>
+</ul>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">2. How We Use Your Data</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li>Provide and sync your coffee journal across devices.</li>
+    <li>Process AI scans (bean bags, equipment) via Google Gemini. Images are sent to Gemini for analysis and are not retained by the AI service after processing.</li>
+    <li>Show nearby cafés and roasteries using Google Places API.</li>
+    <li>Manage your subscription through RevenueCat.</li>
+    <li>Display community-shared visits (only when you explicitly publish a visit).</li>
+</ul>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">3. Third-Party Services</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Firebase (Google):</strong> Authentication, database, cloud storage, and hosting.</li>
+    <li><strong>RevenueCat:</strong> Subscription management. See <a href="https://www.revenuecat.com/privacy/" class="text-red underline">RevenueCat Privacy Policy</a>.</li>
+    <li><strong>Google Gemini AI:</strong> Image analysis for bean and equipment scanning.</li>
+    <li><strong>Google Places API:</strong> Café and roastery search.</li>
+    <li><strong>OpenStreetMap:</strong> Map tiles for the Atlas view.</li>
+</ul>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">4. Data Sharing</h2>
+<p>We do not sell your personal data. Data is shared with third parties only as described above (infrastructure providers). Community-shared visits display your display name and visit data publicly — this is always opt-in per visit.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">5. Data Retention</h2>
+<p>Your data is retained as long as your account exists. You may delete individual entries at any time within the app. To delete your entire account and all associated data, use the "Delete Account" option in Settings.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">6. Security</h2>
+<p>Data is transmitted over HTTPS and stored in Google Cloud (Firebase). Access is controlled by Firebase Security Rules that restrict data to the owning user. AI scan API keys are kept server-side and never exposed to the client.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">7. Children</h2>
+<p>Tamped is not directed at children under 13. We do not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">8. Your Rights</h2>
+<ul class="list-disc pl-6 space-y-2">
+    <li><strong>Access &amp; export:</strong> Export your brew data as PDF or CSV from within the app (Premium).</li>
+    <li><strong>Deletion:</strong> Delete your account and all data from Settings.</li>
+    <li><strong>Correction:</strong> Edit any of your data directly in the app.</li>
+</ul>
+<p class="mt-3">For EU/UK users (GDPR) and California users (CCPA), you may exercise your rights by contacting us at the email below.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">9. Changes</h2>
+<p>We may update this policy. Material changes will be communicated via the app or email. Continued use after changes constitutes acceptance.</p>
+</section>
+
+<section>
+<h2 class="font-headline text-xl text-red mb-3">10. Contact</h2>
+<p>For questions or requests regarding your data:<br/>
+<a href="mailto:hello@tamped.coffee" class="text-red underline">hello@tamped.coffee</a></p>
+</section>
+
+</div>
+</main>
+
+<footer class="border-t-4 border-navy-deep bg-cream px-8 py-6 text-center">
+    <p class="font-mono text-xs tracking-widest opacity-60">© 2026 Sitong Ye · Tamped — your personal coffee journal.</p>
+</footer>
+
+</body>
+</html>

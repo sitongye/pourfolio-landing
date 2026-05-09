@@ -51,6 +51,7 @@
     .rotate-r2 { transform: rotate(1.5deg); }
     .rotate-r3 { transform: rotate(-1deg); }
 
+    @layer components {
     /* ── iPhone 16 Pro Frame ── */
     .phone-frame {
         position: relative;
@@ -74,6 +75,7 @@
             box-shadow: 6px 6px 0px 0px #111D4E;
         }
     }
+    } /* end @layer components */
     .phone-frame .statusbar {
         flex-shrink: 0;
         height: 8%;
@@ -163,18 +165,18 @@
             <div class="absolute -top-6 -right-6 bg-red text-cream-lite border-4 border-navy-deep px-4 py-2 font-headline text-xs rotate-12">
                 OPEN BETA
             </div>
-            <h1 class="font-headline text-6xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 text-navy-deep">
+            <h1 class="font-headline text-4xl md:text-8xl lg:text-9xl leading-[0.9] mb-8 text-navy-deep">
                 BREW WITH<br/>
                 <span class="bg-red text-cream-lite px-4 inline-block transform -skew-x-6">INTENTION.</span>
             </h1>
-            <p class="text-xl md:text-2xl max-w-xl mb-12 font-bold leading-tight text-navy">
+            <p class="text-base md:text-2xl max-w-xl mb-8 md:mb-12 font-bold leading-tight text-navy">
                 Track every bean, every brew, and every discovery. Your personal coffee journal, refined for the modern enthusiast.
             </p>
             <div class="flex flex-wrap gap-6">
-                <a href="#join" class="pop-card bg-navy text-cream-lite px-10 py-5 font-headline text-lg hover:scale-105 transition-transform">
+                <a href="#join" class="pop-card bg-navy text-cream-lite px-6 py-3 md:px-10 md:py-5 font-headline text-sm md:text-lg hover:scale-105 transition-transform">
                     Join Open Testing
                 </a>
-                <a href="#journal" class="pop-card bg-cream-lite px-10 py-5 font-headline text-lg hover:scale-105 transition-transform">
+                <a href="#journal" class="pop-card bg-cream-lite px-6 py-3 md:px-10 md:py-5 font-headline text-sm md:text-lg hover:scale-105 transition-transform">
                     See Features
                 </a>
             </div>
@@ -184,7 +186,7 @@
         <div class="phone-frame float" style="--rot:2deg;">
             <div class="statusbar"></div><img alt="Journal main screen" src="screenshots/journal_home.png"/>
         </div>
-        <div class="phone-frame float-delay hidden md:block" style="--rot:-1.5deg; margin-top: 60px;">
+        <div class="phone-frame float-delay hidden md:flex" style="--rot:-1.5deg; margin-top: 60px;">
             <div class="statusbar"></div><img alt="Brew timer active" src="screenshots/brew_timer_active.png"/>
         </div>
     </div>
@@ -203,9 +205,9 @@
 
 <section class="grid lg:grid-cols-2 gap-16 items-center reveal">
     <div class="order-2 lg:order-1">
-        <div class="pop-card bg-red p-12 -rotate-1">
-            <h3 class="font-headline text-5xl md:text-6xl mb-8 text-cream-lite">JOURNAL YOUR JOURNEY</h3>
-            <p class="text-lg font-bold leading-relaxed mb-8 text-cream">
+        <div class="pop-card bg-red p-6 md:p-12 -rotate-1">
+            <h3 class="font-headline text-3xl md:text-6xl mb-4 md:mb-8 text-cream-lite">JOURNAL YOUR JOURNEY</h3>
+            <p class="text-sm md:text-lg font-bold leading-relaxed mb-4 md:mb-8 text-cream">
                 Visualize your progress with interactive heat maps and detailed brew statistics. Track grind size, water temp, and extraction time to achieve ultimate consistency.
             </p>
         </div>
@@ -214,7 +216,7 @@
         <div class="phone-frame float" style="--rot:3deg;">
             <div class="statusbar"></div><img alt="Journal scrolled" src="screenshots/journal_scroll.png"/>
         </div>
-        <div class="phone-frame float-delay hidden md:block" style="--rot:-2deg; margin-top: 40px;">
+        <div class="phone-frame float-delay hidden md:flex" style="--rot:-2deg; margin-top: 40px;">
             <div class="statusbar"></div><img alt="Photo viewer" src="screenshots/photo_viewer.png"/>
         </div>
     </div>
@@ -226,14 +228,14 @@
         <div class="phone-frame float" style="--rot:-2deg;">
             <div class="statusbar"></div><img alt="Brew pour over setup" src="screenshots/brew_pourover.png"/>
         </div>
-        <div class="phone-frame float-delay hidden md:block" style="--rot:1deg; margin-top: 50px;">
+        <div class="phone-frame float-delay hidden md:flex" style="--rot:1deg; margin-top: 50px;">
             <div class="statusbar"></div><img alt="Brew timer active" src="screenshots/brew_timer_active.png"/>
         </div>
     </div>
     <div>
-        <div class="pop-card bg-navy text-cream-lite p-12 rotate-1">
-            <h3 class="font-headline text-5xl md:text-6xl mb-8">PERFECT YOUR POUR</h3>
-            <p class="text-lg font-bold leading-relaxed mb-8 opacity-90">
+        <div class="pop-card bg-navy text-cream-lite p-6 md:p-12 rotate-1">
+            <h3 class="font-headline text-3xl md:text-6xl mb-4 md:mb-8">PERFECT YOUR POUR</h3>
+            <p class="text-sm md:text-lg font-bold leading-relaxed mb-4 md:mb-8 opacity-90">
                 Guided step-by-step brew recipes for espresso, pour-over, AeroPress, and more. A precision timer keeps your ritual on track.
             </p>
         </div>
@@ -243,9 +245,9 @@
 <!-- ═══════════════════ MODULE 03: SHELF & KIT ═══════════════════ -->
 <section class="grid lg:grid-cols-2 gap-16 items-center reveal">
     <div>
-        <div class="pop-card bg-cream p-12 -rotate-2">
-            <h3 class="font-headline text-5xl md:text-6xl mb-8 text-navy-deep">MANAGE YOUR KIT</h3>
-            <p class="text-lg font-bold leading-relaxed mb-8 text-navy">
+        <div class="pop-card bg-cream p-6 md:p-12 -rotate-2">
+            <h3 class="font-headline text-3xl md:text-6xl mb-4 md:mb-8 text-navy-deep">MANAGE YOUR KIT</h3>
+            <p class="text-sm md:text-lg font-bold leading-relaxed mb-4 md:mb-8 text-navy">
                 From vintage manual grinders to professional espresso machines. Organize your beans, track your recipes, and maintain equipment for peak performance.
             </p>
         </div>
@@ -254,7 +256,7 @@
         <div class="phone-frame float" style="--rot:2deg;">
             <div class="statusbar"></div><img alt="Bean shelf" src="screenshots/shelf_beans.png"/>
         </div>
-        <div class="phone-frame float-delay hidden md:block" style="--rot:-1deg; margin-top: 45px;">
+        <div class="phone-frame float-delay hidden md:flex" style="--rot:-1deg; margin-top: 45px;">
             <div class="statusbar"></div><img alt="Equipment kit" src="screenshots/kit.png"/>
         </div>
     </div>
@@ -268,14 +270,14 @@
         <div class="phone-frame float" style="--rot:-2deg;">
             <div class="statusbar"></div><img alt="Atlas map" src="screenshots/atlas.png"/>
         </div>
-        <div class="phone-frame float-delay hidden md:block" style="--rot:2deg; margin-top: 50px;">
+        <div class="phone-frame float-delay hidden md:flex" style="--rot:2deg; margin-top: 50px;">
             <div class="statusbar"></div><img alt="Friend circles" src="screenshots/circles.png"/>
         </div>
     </div>
     <div>
-        <div class="pop-card bg-navy text-cream-lite p-12 rotate-1">
-            <h3 class="font-headline text-5xl md:text-6xl mb-8">ATLAS & CIRCLES</h3>
-            <p class="text-lg font-bold leading-relaxed mb-8 opacity-90">
+        <div class="pop-card bg-navy text-cream-lite p-6 md:p-12 rotate-1">
+            <h3 class="font-headline text-3xl md:text-6xl mb-4 md:mb-8">ATLAS & CIRCLES</h3>
+            <p class="text-sm md:text-lg font-bold leading-relaxed mb-4 md:mb-8 opacity-90">
                 Discover specialty cafés and roasteries on a curated global map. Create private circles with friends to share favorites, plan coffee crawls, and compare tasting notes.
             </p>
         </div>

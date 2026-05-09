@@ -54,7 +54,7 @@
     /* ── iPhone 16 Pro Frame ── */
     .phone-frame {
         position: relative;
-        width: min(260px, 40vw);
+        width: 260px;
         aspect-ratio: 402 / 820;
         border-radius: 13.7% / 6.3%;
         border: 2px solid #111D4E;
@@ -65,8 +65,10 @@
         display: flex;
         flex-direction: column;
     }
-    .carousel-track .phone-frame {
-        width: min(220px, 45vw);
+    @media (max-width: 767px) {
+        .carousel-track .phone-frame {
+            width: 180px;
+        }
     }
     .phone-frame .statusbar {
         flex-shrink: 0;

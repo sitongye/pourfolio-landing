@@ -359,6 +359,20 @@
                     Sign Up →
                 </button>
             </div>
+            <div class="flex justify-center gap-6 mt-4">
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="platform" value="iOS" class="accent-red w-4 h-4" checked />
+                    <span class="font-bold text-sm">iOS</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="platform" value="Android" class="accent-red w-4 h-4" />
+                    <span class="font-bold text-sm">Android</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="platform" value="Both" class="accent-red w-4 h-4" />
+                    <span class="font-bold text-sm">Both</span>
+                </label>
+            </div>
             <p id="signup-msg" class="mt-4 text-sm font-bold opacity-0 transition-opacity duration-300"></p>
         </form>
 
@@ -426,6 +440,8 @@ function handleSignup(e) {
     const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSflKaHsPQ1x1-yTdK_MjHbLQ1lp6ZihjGZ99ihR5OhA8yszEw/formResponse';
     const formData = new FormData();
     formData.append('entry.316685997', email);
+    const platform = document.querySelector('input[name="platform"]:checked').value;
+    formData.append('entry.457462283', platform);
 
     fetch(formUrl, { method: 'POST', mode: 'no-cors', body: formData })
         .then(() => {

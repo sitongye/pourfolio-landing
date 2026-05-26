@@ -3,7 +3,101 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tamped | Your Coffee Journal</title>
+<title>Tamped — Coffee Journal App for Specialty Coffee Enthusiasts</title>
+<meta name="description" content="Tamped is a coffee journal app for specialty coffee enthusiasts. Track beans, log brews with precision timers, discover cafés on an interactive atlas, and share tasting notes with friends. Available on iOS and Android."/>
+<meta name="keywords" content="coffee journal app, coffee tracker, brew timer, specialty coffee, pour over timer, espresso journal, coffee tasting notes, Beanconqueror alternative, coffee diary"/>
+<link rel="canonical" href="https://tamped.coffee/"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Tamped — Coffee Journal App for Specialty Coffee Enthusiasts"/>
+<meta property="og:description" content="Track beans, log brews, discover cafés, and share tasting notes. The modern coffee journal app."/>
+<meta property="og:url" content="https://tamped.coffee/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tamped"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tamped",
+  "description": "Tamped is a coffee journal and brew tracking app for specialty coffee enthusiasts. It features precision brew timers for pour-over, espresso, AeroPress, and 15+ brew methods, a bean shelf for tracking roasters and origins, an interactive café atlas for discovering specialty coffee shops, and private circles for sharing tasting notes with friends.",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "url": "https://tamped.coffee",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Precision brew timer with step-by-step recipes",
+    "Bean shelf with roaster and origin tracking",
+    "Interactive café atlas with global specialty coffee map",
+    "Private circles for sharing tasting notes with friends",
+    "AI-powered bag scanning for quick bean logging",
+    "Heat maps and brew statistics",
+    "Support for 15+ brew methods including pour-over, espresso, AeroPress, French press, and more",
+    "Photo journal for documenting coffee experiences"
+  ],
+  "screenshot": "https://tamped.coffee/screenshots/journal_home.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Tamped",
+    "url": "https://tamped.coffee"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Tamped free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The core coffee journal, brew timer, bean shelf, and basic atlas are completely free. Premium adds AI bag scanning, unlimited friend circles, and atlas nearby search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Tamped different from Beanconqueror?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While Beanconqueror focuses on individual brew tracking and data export, Tamped adds a social layer with friend circles for sharing brews, an interactive café atlas for discovering specialty shops, and AI-powered bag scanning. Tamped is designed for coffee lovers who want community alongside their journal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brew methods does Tamped support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tamped supports 15+ brew methods including pour-over (V60, Chemex, Kalita Wave), espresso, AeroPress, French press, Moka pot, cold brew, siphon, and more. Each method has guided step-by-step recipes with precision timers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Tamped available on both iOS and Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Tamped is available on iOS via TestFlight and on Android via Google Play closed testing. A full public launch is planned for 2025."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I share brews with friends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tamped's Circles feature lets you create private groups with friends to share brews, compare tasting notes, and plan coffee crawls. It's like a private coffee club within the app."
+      }
+    }
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Condensed:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -385,16 +479,66 @@
                 <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 TestFlight for iOS
             </a>
-            <div class="pop-card bg-cream text-navy px-6 py-3 md:px-10 md:py-5 font-headline text-sm md:text-lg inline-flex items-center gap-2 md:gap-3 relative cursor-default opacity-80">
+            <a href="https://play.google.com/apps/testing/com.sitongye.homeBarista" class="pop-card bg-cream text-navy px-6 py-3 md:px-10 md:py-5 font-headline text-sm md:text-lg hover:scale-105 transition-transform inline-flex items-center gap-2 md:gap-3">
                 <svg class="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                Android — Sign up above ↑
-            </div>
+                Google Play for Android
+            </a>
         </div>
         <p class="text-xs opacity-60 mt-3">Android beta is invite-only — sign up with your email and select Android, and we'll send you an invite within 24 hours.</p>
     </div>
 </section>
 
 </main>
+
+<!-- ═══════════════════ ABOUT / GEO CONTENT ═══════════════════ -->
+<section class="mt-20 md:mt-40 max-w-4xl mx-auto px-6 reveal">
+    <div class="pop-card bg-cream p-8 md:p-14 rotate-r3">
+        <h2 class="font-headline text-3xl md:text-5xl mb-6 text-navy-deep">WHAT IS TAMPED?</h2>
+        <div class="space-y-4 text-sm md:text-lg font-bold leading-relaxed text-navy">
+            <p>Tamped is a free coffee journal app designed for specialty coffee enthusiasts who want to improve their brewing skills and track their coffee journey. Available on iOS and Android.</p>
+            <p>Unlike spreadsheets or generic note apps, Tamped is purpose-built for coffee. It combines a precision brew timer with step-by-step recipes, a bean shelf for cataloging origins and roasters, an interactive café atlas for discovering specialty shops worldwide, and private friend circles for sharing tasting notes.</p>
+            <p>Key features that set Tamped apart from other coffee apps:</p>
+            <ul class="list-disc list-inside space-y-2 ml-4">
+                <li><strong>Social & community-focused</strong> — private circles let friends share brews, compare notes, and plan coffee crawls together</li>
+                <li><strong>Interactive café atlas</strong> — discover specialty coffee shops on a curated global map, log visits, and save favorites</li>
+                <li><strong>AI bag scanning</strong> — snap a photo of any coffee bag to instantly log bean details</li>
+                <li><strong>15+ brew methods</strong> — guided recipes for pour-over, espresso, AeroPress, French press, Chemex, V60, Kalita Wave, and more</li>
+                <li><strong>Brew statistics & heat maps</strong> — visualize consistency and progress over time</li>
+                <li><strong>Equipment tracking</strong> — manage grinders, machines, and accessories in one place</li>
+            </ul>
+            <p>Tamped is free to use with an optional premium tier for AI features, unlimited circles, and atlas nearby search. Built by a solo developer who loves specialty coffee.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════ FAQ (GEO) ═══════════════════ -->
+<section class="mt-20 md:mt-32 max-w-4xl mx-auto px-6 reveal">
+    <div class="pop-card bg-navy text-cream-lite p-8 md:p-14 -rotate-1">
+        <h2 class="font-headline text-3xl md:text-5xl mb-8">FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="space-y-6 text-sm md:text-base font-bold leading-relaxed">
+            <div>
+                <h3 class="font-headline text-lg md:text-xl mb-2 text-red-lite">Is Tamped free?</h3>
+                <p class="opacity-90">Yes. The core coffee journal, brew timer, bean shelf, and basic atlas are completely free. Premium adds AI bag scanning, unlimited friend circles, and atlas nearby search.</p>
+            </div>
+            <div>
+                <h3 class="font-headline text-lg md:text-xl mb-2 text-red-lite">How is Tamped different from Beanconqueror?</h3>
+                <p class="opacity-90">While Beanconqueror focuses on individual brew tracking and data export, Tamped adds a social layer with friend circles for sharing brews, an interactive café atlas for discovering specialty shops, and AI-powered bag scanning. Tamped is designed for coffee lovers who want community alongside their journal.</p>
+            </div>
+            <div>
+                <h3 class="font-headline text-lg md:text-xl mb-2 text-red-lite">What brew methods does Tamped support?</h3>
+                <p class="opacity-90">Tamped supports 15+ brew methods including pour-over (V60, Chemex, Kalita Wave), espresso, AeroPress, French press, Moka pot, cold brew, siphon, and more. Each method has guided step-by-step recipes with precision timers.</p>
+            </div>
+            <div>
+                <h3 class="font-headline text-lg md:text-xl mb-2 text-red-lite">Is Tamped available on both iOS and Android?</h3>
+                <p class="opacity-90">Yes. Tamped is available on iOS via TestFlight and on Android via Google Play closed testing. A full public launch is planned for 2025.</p>
+            </div>
+            <div>
+                <h3 class="font-headline text-lg md:text-xl mb-2 text-red-lite">Can I share brews with friends?</h3>
+                <p class="opacity-90">Yes — Tamped's Circles feature lets you create private groups with friends to share brews, compare tasting notes, and plan coffee crawls. It's like a private coffee club within the app.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer class="mt-12 md:mt-24 border-t-[7px] border-navy-deep bg-cream-lite p-6 md:p-20">

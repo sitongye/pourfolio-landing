@@ -50,7 +50,7 @@ tailwind.config = {
 <ul class="list-disc pl-6 space-y-2">
     <li><strong>Account information:</strong> Email address and display name when you sign up (or name/email provided by Google or Apple Sign-In).</li>
     <li><strong>Coffee data:</strong> Beans, brew logs, recipes, equipment, café visits, cupping scores, and related notes you enter.</li>
-    <li><strong>Photos:</strong> Images you capture or select (bean bags, latte art, café visits). Photos are stored in Firebase Cloud Storage linked to your account.</li>
+    <li><strong>Photos:</strong> Images you capture or select (bean bags, latte art, café visits). Photos are stored locally on your device and are not uploaded to our servers.</li>
     <li><strong>Location:</strong> When you log a café visit or browse the Atlas map, we use your approximate location to show nearby places. Location is used only in real-time and is not continuously tracked.</li>
     <li><strong>Subscription status:</strong> Purchase and entitlement data managed by RevenueCat to determine your plan (free or premium).</li>
 </ul>
@@ -70,7 +70,7 @@ tailwind.config = {
 <section>
 <h2 class="font-headline text-xl text-red mb-3">3. Third-Party Services</h2>
 <ul class="list-disc pl-6 space-y-2">
-    <li><strong>Firebase (Google):</strong> Authentication, database, cloud storage, and hosting.</li>
+    <li><strong>Firebase (Google):</strong> Authentication, database, and hosting.</li>
     <li><strong>RevenueCat:</strong> Subscription management. See <a href="https://www.revenuecat.com/privacy/" class="text-red underline">RevenueCat Privacy Policy</a>.</li>
     <li><strong>Google Gemini AI:</strong> Image analysis for bean and equipment scanning.</li>
     <li><strong>Google Places API:</strong> Café and roastery search.</li>

@@ -61,9 +61,9 @@
           <label>Custom ratio
             <input id="ratio" type="number" min="1" step="0.1" value="16">
           </label>
-          <button class="button" id="calc" type="button">Calculate</button>
+          <button class="button" id="calc" type="button" onclick="calculateRatio()">Calculate</button>
         </div>
-        <div class="result" id="result">18g coffee at 1:16 gives a 288g water target.</div>
+        <div class="result" id="result" role="status" aria-live="polite">18g coffee at 1:16 gives a 288g water target.</div>
       </div>
     </section>
 
@@ -86,32 +86,50 @@
   </footer>
 
   <script>
-    const method = document.getElementById('method');
-    const dose = document.getElementById('dose');
-    const ratio = document.getElementById('ratio');
-    const result = document.getElementById('result');
-    const calc = document.getElementById('calc');
+    function calculateRatio() {
+      const method = document.getElementById('method');
+      const dose = document.getElementById('dose');
+      const ratio = document.getElementById('ratio');
+      const result = document.getElementById('result');
+      if (!method || !dose || !ratio || !result) return;
 
-    method.addEventListener('change', () => {
-      ratio.value = method.value;
-      update();
-    });
-
-    calc.addEventListener('click', update);
-    dose.addEventListener('input', update);
-    ratio.addEventListener('input', update);
-
-    function update() {
-      const doseValue = Number(dose.value || 0);
-      const ratioValue = Number(ratio.value || 0);
-      const target = Math.round(doseValue * ratioValue);
+      const doseValue = Number.parseFloat(dose.value);
+      const ratioValue = Number.parseFloat(ratio.value);
       const label = method.options[method.selectedIndex].text.split(':')[0];
-      if (!doseValue || !ratioValue) {
-        result.textContent = 'Enter a dose and ratio to calculate a target.';
+
+      if (!Number.isFinite(doseValue) || !Number.isFinite(ratioValue) || doseValue <= 0 || ratioValue <= 0) {
+        result.textContent = 'Enter a dose and ratio greater than zero to calculate a target.';
+        result.classList.remove('is-updated');
+        void result.offsetWidth;
+        result.classList.add('is-updated');
         return;
       }
+
+      const target = Math.round(doseValue * ratioValue);
       const targetWord = label === 'Espresso' ? 'yield' : 'water';
-      result.textContent = `${doseValue}g coffee at 1:${ratioValue} gives a ${target}g ${targetWord} target.`;
+      result.textContent = `${formatNumber(doseValue)}g coffee at 1:${formatNumber(ratioValue)} gives a ${target}g ${targetWord} target.`;
+      result.classList.remove('is-updated');
+      void result.offsetWidth;
+      result.classList.add('is-updated');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const method = document.getElementById('method');
+      const dose = document.getElementById('dose');
+      const ratio = document.getElementById('ratio');
+      const calc = document.getElementById('calc');
+
+      method?.addEventListener('change', () => {
+        ratio.value = method.value;
+        calculateRatio();
+      });
+      calc?.addEventListener('click', calculateRatio);
+      dose?.addEventListener('input', calculateRatio);
+      ratio?.addEventListener('input', calculateRatio);
+    });
+
+    function formatNumber(value) {
+      return Number.isInteger(value) ? String(value) : value.toFixed(1).replace(/\.0$/, '');
     }
   </script>
 </body>

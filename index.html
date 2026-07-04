@@ -305,7 +305,7 @@
             <a class="hover:text-red transition-colors" href="#journal">Journal</a>
             <a class="hover:text-red transition-colors" href="#brew">Brew</a>
             <a class="hover:text-red transition-colors" href="#atlas">Atlas</a>
-            <a class="hover:text-red transition-colors" href="#atlas">Circles</a>
+            <a class="hover:text-red transition-colors" href="#guides">Guides</a>
         </div>
         <a href="#join" class="bg-red text-cream-lite border-2 border-navy-deep px-3 md:px-5 py-2 font-headline text-[11px] md:text-xs uppercase shadow-pop-sm hover:bg-red-lite transition-colors">
             Download
@@ -334,8 +334,8 @@
                 <a href="https://apps.apple.com/us/app/tamped-your-coffee-os/id6761858870" class="pop-card bg-navy text-cream-lite px-5 py-3 md:px-7 md:py-4 font-headline text-sm md:text-lg hover:scale-105 transition-transform">
                     Download iOS
                 </a>
-                <a href="#journal" class="pop-card bg-cream-lite px-5 py-3 md:px-7 md:py-4 font-headline text-sm md:text-lg hover:scale-105 transition-transform">
-                    See Features
+                <a href="#guides" class="pop-card bg-cream-lite px-5 py-3 md:px-7 md:py-4 font-headline text-sm md:text-lg hover:scale-105 transition-transform">
+                    Browse Guides
                 </a>
             </div>
         </div>
@@ -498,6 +498,38 @@
     </div>
 </section>
 
+<!-- ═══════════════════ SEO ROUTES ═══════════════════ -->
+<section id="guides" class="mt-16 md:mt-24 reveal">
+    <div class="mb-6 md:mb-8">
+        <div class="inline-block bg-red text-cream-lite border-2 border-navy-deep px-3 py-2 font-headline text-xs mb-4">
+            COFFEE TOOLS & CITY GUIDES
+        </div>
+        <h2 class="font-headline text-3xl md:text-5xl leading-tight text-navy-deep">Plan the next cup before you open the app.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+        <a href="/coffee-ratio-calculator/" class="pop-card bg-cream p-5 md:p-6 text-navy no-underline">
+            <div class="font-headline text-xl md:text-2xl mb-3 text-navy-deep">Coffee ratio calculator</div>
+            <p class="text-sm md:text-base font-bold leading-relaxed opacity-80 mb-4">Find dose, water, and espresso yield targets, then save the recipe in Tamped.</p>
+            <span class="font-headline text-red text-sm uppercase">Calculate ratio</span>
+        </a>
+        <a href="/brew-guides/v60-pour-over/" class="pop-card bg-cream p-5 md:p-6 text-navy no-underline">
+            <div class="font-headline text-xl md:text-2xl mb-3 text-navy-deep">Brew guides</div>
+            <p class="text-sm md:text-base font-bold leading-relaxed opacity-80 mb-4">Dial in V60 and espresso with practical steps you can log against beans and grind changes.</p>
+            <span class="font-headline text-red text-sm uppercase">Read brew guides</span>
+        </a>
+        <a href="/cities/tokyo/" class="pop-card bg-cream p-5 md:p-6 text-navy no-underline">
+            <div class="font-headline text-xl md:text-2xl mb-3 text-navy-deep">City coffee maps</div>
+            <p class="text-sm md:text-base font-bold leading-relaxed opacity-80 mb-4">Start with Tokyo, London, and Berlin roasteries, then keep favorites in the atlas.</p>
+            <span class="font-headline text-red text-sm uppercase">Explore cities</span>
+        </a>
+    </div>
+    <div class="mt-5 flex flex-wrap gap-3 font-headline text-sm uppercase">
+        <a class="bg-cream-lite border-2 border-navy-deep px-3 py-2 no-underline hover:text-red" href="/brew-guides/espresso-dial-in/">Espresso dial-in</a>
+        <a class="bg-cream-lite border-2 border-navy-deep px-3 py-2 no-underline hover:text-red" href="/cities/london/">London</a>
+        <a class="bg-cream-lite border-2 border-navy-deep px-3 py-2 no-underline hover:text-red" href="/cities/berlin/">Berlin</a>
+    </div>
+</section>
+
 <!-- ═══════════════════ DOWNLOAD CTA ═══════════════════ -->
 <section id="join" class="mt-20 md:mt-20 md:mt-28 reveal">
     <div class="pop-card bg-navy text-cream-lite p-5 md:p-8 text-center">
@@ -652,7 +684,15 @@
                     Track beans, brews & footprints.
                 </p>
             </div>
-            <div class="grid grid-cols-1 gap-y-6 font-headline text-lg">
+            <div class="grid grid-cols-1 gap-y-4 font-headline text-base md:text-lg">
+                <a class="hover:text-red underline decoration-4 decoration-red/30 hover:decoration-red transition-colors" href="/coffee-ratio-calculator/">Ratio Calculator</a>
+                <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="/brew-guides/v60-pour-over/">V60 Guide</a>
+                <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="/brew-guides/espresso-dial-in/">Espresso Guide</a>
+                <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="/cities/tokyo/">Tokyo</a>
+                <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="/cities/london/">London</a>
+                <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="/cities/berlin/">Berlin</a>
+            </div>
+            <div class="grid grid-cols-1 gap-y-4 font-headline text-base md:text-lg">
                 <a class="hover:text-red underline decoration-4 decoration-red/30 hover:decoration-red transition-colors" href="privacy.html">Privacy</a>
                 <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="terms.html">Terms</a>
                 <a class="hover:text-red underline decoration-4 decoration-navy/30 hover:decoration-red transition-colors" href="mailto:hello@tamped.coffee">Support</a>

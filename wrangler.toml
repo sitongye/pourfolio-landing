@@ -1,0 +1,7 @@
+name = "tamped-coffee"
+compatibility_date = "2026-07-04"
+pages_build_output_dir = "."
+
+# Static Cloudflare Pages site.
+# Production branch: main
+# Build command for Git integration: exit 0

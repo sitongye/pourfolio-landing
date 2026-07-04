@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple coffee ratio calculator for espresso, V60, AeroPress, French press, cold brew, and batch brew. Track your best recipes in Tamped.">
+  <link rel="stylesheet" href="/marketing.css">
+  <link rel="icon" type="image/png" href="/brand/tamped-logo-256.png">
+  <title>Coffee Ratio Calculator | Tamped</title>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="/"><img src="/brand/tamped-logo-256.png" alt="Tamped logo">Tamped</a>
+      <nav class="nav" aria-label="Marketing pages">
+        <a href="/brew-guides/espresso-dial-in/">Espresso</a>
+        <a href="/brew-guides/v60-pour-over/">V60</a>
+        <a href="/cities/tokyo-specialty-coffee-roasteries/">Tokyo roasteries</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Coffee ratio tool</div>
+        <h1>Calculate your brew ratio before the kettle boils.<span class="accent-script">measure, brew, remember</span></h1>
+        <p class="lede">Choose a method, set your coffee dose, and get a practical water or yield target. Save the recipe and actual result in Tamped so your next cup starts from evidence, not memory.</p>
+        <div class="cta-row">
+          <a class="button" href="https://apps.apple.com/us/app/tamped-your-coffee-os/id6761858870?pt=126909987&ct=seo_ratio_calculator&mt=8">Download on the App Store</a>
+          <a class="button secondary" href="/brew-guides/v60-pour-over/">Read the V60 guide</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="stat-grid">
+          <div class="stat"><strong>1:2</strong>Espresso starting point</div>
+          <div class="stat"><strong>1:16</strong>V60 and filter baseline</div>
+          <div class="stat"><strong>1:12</strong>French press body-first cup</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Ratio calculator</h2>
+      <p class="lede">These are starting points. Taste decides the final recipe.</p>
+      <div class="tool">
+        <div class="form-grid">
+          <label>Method
+            <select id="method">
+              <option value="2">Espresso: 1:2 yield</option>
+              <option value="15">AeroPress: 1:15 water</option>
+              <option value="16" selected>V60 / pour over: 1:16 water</option>
+              <option value="12">French press: 1:12 water</option>
+              <option value="8">Cold brew concentrate: 1:8 water</option>
+              <option value="17">Batch brew: 1:17 water</option>
+            </select>
+          </label>
+          <label>Coffee dose (g)
+            <input id="dose" type="number" min="1" step="0.1" value="18">
+          </label>
+          <label>Custom ratio
+            <input id="ratio" type="number" min="1" step="0.1" value="16">
+          </label>
+          <button class="button" id="calc" type="button">Calculate</button>
+        </div>
+        <div class="result" id="result">18g coffee at 1:16 gives a 288g water target.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What to log after brewing</h2>
+      <div class="feature-grid">
+        <div class="feature"><h3>Dose and yield</h3><p>Record what actually happened, especially for espresso where a few grams can change the cup.</p></div>
+        <div class="feature"><h3>Grind and time</h3><p>Track grind changes next to brew time so your next adjustment is clear.</p></div>
+        <div class="feature"><h3>Taste notes</h3><p>Mark sour, balanced, bitter, sweet, body, and aroma while the cup is still fresh.</p></div>
+      </div>
+      <div class="callout">
+        <h3>Use this with Tamped</h3>
+        <p>Scan the bag, choose the bean from your shelf, brew with a timer, and keep the ratio, dose, yield, grind, and tasting notes in one coffee journal.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tamped - coffee journal, bean scanner, brew tracker, and roastery map.</p>
+  </footer>
+
+  <script>
+    const method = document.getElementById('method');
+    const dose = document.getElementById('dose');
+    const ratio = document.getElementById('ratio');
+    const result = document.getElementById('result');
+    const calc = document.getElementById('calc');
+
+    method.addEventListener('change', () => {
+      ratio.value = method.value;
+      update();
+    });
+
+    calc.addEventListener('click', update);
+    dose.addEventListener('input', update);
+    ratio.addEventListener('input', update);
+
+    function update() {
+      const doseValue = Number(dose.value || 0);
+      const ratioValue = Number(ratio.value || 0);
+      const target = Math.round(doseValue * ratioValue);
+      const label = method.options[method.selectedIndex].text.split(':')[0];
+      if (!doseValue || !ratioValue) {
+        result.textContent = 'Enter a dose and ratio to calculate a target.';
+        return;
+      }
+      const targetWord = label === 'Espresso' ? 'yield' : 'water';
+      result.textContent = `${doseValue}g coffee at 1:${ratioValue} gives a ${target}g ${targetWord} target.`;
+    }
+  </script>
+</body>
+</html>

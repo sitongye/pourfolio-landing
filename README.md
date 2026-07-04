@@ -1,13 +1,29 @@
 # Tamped Landing Page
 
-Pop-art style landing page for **Tamped** — your personal coffee journal app.
+Static landing and SEO pages for **Tamped** — your personal coffee journal app.
 
 ## Preview
 
-Open `index.html` in a browser, or deploy via GitHub Pages.
+Open `index.html` in a browser, or run a local static server:
+
+```sh
+python3 -m http.server 8090
+```
+
+## Hosting
+
+The site is prepared for Cloudflare Pages.
+
+- Project name: `tamped-coffee`
+- Build command: `exit 0`
+- Build output directory: `.`
+- Production branch: `main`
+
+See `docs/cloudflare-pages.md` for the DNS cutover checklist.
 
 ## Stack
 
-- Single HTML file (Tailwind CDN + Google Fonts + Material Symbols)
-- 15 iPhone 16 Pro screenshots
-
+- Static HTML
+- Tailwind CDN on the landing page
+- Shared CSS for SEO pages in `marketing.css`
+- Cloudflare Pages `_headers` and `_redirects`

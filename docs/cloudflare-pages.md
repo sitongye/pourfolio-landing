@@ -30,8 +30,8 @@ SEO pages live under the same domain:
 - `/coffee-ratio-calculator/`
 - `/brew-guides/espresso-dial-in/`
 - `/brew-guides/v60-pour-over/`
-- `/cities/tokyo-specialty-coffee-roasteries/`
-- `/cities/london-specialty-coffee-roasteries/`
-- `/cities/berlin-specialty-coffee-roasteries/`
+- `/cities/tokyo/`
+- `/cities/london/`
+- `/cities/berlin/`
 
 `robots.txt` points search engines to `sitemap.xml`.
